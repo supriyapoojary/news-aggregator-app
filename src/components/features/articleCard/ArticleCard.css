@@ -1,0 +1,82 @@
+.article-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease-in-out;
+    margin: 16px 0;
+    width: 100%;
+    max-width: 280px;
+  }
+  
+  .article-card:hover {
+    transform: translateY(-4px);
+  }
+  
+  .article-image {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+  }
+  
+  .article-content {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .article-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+    color: #222;
+  }
+  
+  .article-description {
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.5;
+  }
+  
+  .article-meta {
+    font-size: 0.85rem;
+    color: #777;
+  }
+  
+  .read-more {
+    align-self: flex-start;
+    padding: 8px 14px;
+    background-color: #0077cc;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease;
+  }
+  
+  .read-more:hover {
+    background-color: #005fa3;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .article-card {
+      margin: 12px 0;
+    }
+  
+    .article-title {
+      font-size: 1.1rem;
+    }
+  
+    .article-description {
+      font-size: 0.9rem;
+    }
+  
+    .read-more {
+      font-size: 0.85rem;
+    }
+  }
+  
