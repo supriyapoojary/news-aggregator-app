@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import ArticleCard from "../articleCard/ArticleCard";
 
 import SearchFilter from "../searchFilter/SearchFilter";
@@ -39,7 +39,7 @@ const NewsFeed: React.FC = () => {
   const allSources = ["NewsAPI", "Guardian", "NYTimes"];
   const allCategories = ["World", "Business", "Technology", "Sports", "Entertainment"];
 
-  const loadArticles = async () => {
+  const loadArticles = useCallback(async () => {
     setLoading(true);
     setError("");
     try {
@@ -56,7 +56,7 @@ const NewsFeed: React.FC = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [filters]);
 
   useEffect(() => {
     loadArticles();
