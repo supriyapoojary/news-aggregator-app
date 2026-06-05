@@ -60,7 +60,7 @@ const NewsFeed: React.FC = () => {
 
   useEffect(() => {
     loadArticles();
-  }, [filters]);
+  }, [loadArticles]);
 
   return (
     <div className="news-feed">
